@@ -1,0 +1,104 @@
+* {
+    font-family: sans-serif;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.img__float {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: 1s ease-in;
+}
+@media only screen and (max-width: 568px){
+    .container {
+        max-width: 98%;
+        align-items: flex-start;
+    }
+    .img__float {
+        width: 70px;
+        height: 100px;
+    }
+}
+.img__none {
+    display: none;
+}
+.btn {
+    padding: 10px 50px;
+    font-size: 30px;
+    background-color: blueviolet;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.btn:hover {
+    box-shadow: 0 0 30px black;
+}
+.loading__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+.photo__none {
+    display: none;
+}
+.photo__blok {
+    display: block;
+}
+
+/* 
+============
+  Loading
+============
+*/
+
+.lds-hourglass {
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
